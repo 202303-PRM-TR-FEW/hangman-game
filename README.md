@@ -91,7 +91,7 @@ If you have issues, google them.
 <br>
 If you still have issues, talk to your friends in the same room.
 <br>
-If you still have issues, talk to your instructors. (There is a request help button in zoom that will tell us to join you or simply PM us on slack)
+If you still have issues, talk to your instructors.
 <br>
 <br>
 
