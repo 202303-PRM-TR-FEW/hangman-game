@@ -1,5 +1,16 @@
 body {
   background-color: bisque;
+  background-image: url("/bckgrndpic.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#bckgrndpic {
+  max-width: 1000px;
+  z-index: -1;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #bckgrndpic {
@@ -109,7 +120,7 @@ body {
   margin-bottom: 20px;
 }
 button.buttons {
-  background-color: #68c72e;
+  background-color: #afe38f;
   border: none;
   border-radius: 5px;
   color: #333;
@@ -145,7 +156,6 @@ p {
 }
 
 body {
-  background-color: #68c72e;
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -153,7 +163,7 @@ body {
 
 .text {
   align-items: center;
-  background-color: #68c72e;
+  background-color: darkgrey;
   color: #fff;
   display: flex;
   flex-direction: column;

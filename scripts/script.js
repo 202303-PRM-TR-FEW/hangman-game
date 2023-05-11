@@ -1,8 +1,18 @@
 let word;
 let lives = 10;
+let didWin = false;
 
+//current lives DOM
+const currentlives = document.querySelector("#currentlives");
+currentlives.innerHTML = `You have ${lives} lives left `;
+
+//word generate button DOM
 const generateBtn = document.querySelector("#generatebtn");
 generateBtn.addEventListener("click", loadTheWord);
+
+//cubuks DOM
+const cubuks = document.querySelector("#cubuks");
+cubuks.innerHTML = "-";
 
 function loadTheWord() {
   return fetch(`https://random-word-api.herokuapp.com/word?number=1`)
@@ -13,23 +23,8 @@ function loadTheWord() {
     })
     .catch((err) => console.error(err));
 }
-
-function letterChecker(letter) {
-  if (word.includes(letter)) {
-    //blabla
-    //show letters on cubuks
-  } else {
-    if (lives == 1) {
-      //game over
-    } else {
-      lives = lives--;
-      //show one more man part
-      //function
-      `kol-${lives}`;
-    }
-  }
-}
-
+console.log(word);
+cubuks.innerHTML = [...word].map((x) => "_");
 //Aymans part
 function buttons() {
   const alphabetButtons = document.getElementById("buttons");
@@ -41,12 +36,25 @@ function buttons() {
     letterButton.addEventListener("click", function () {
       ButtonClick(this.innerText);
     });
-
     alphabetButtons.appendChild(letterButton);
   }
 }
+buttons();
 
 function ButtonClick(letter) {
-  console.log(`You clicked the ${letter} button!`);
+  let lowercaseLetter = letter.toLowerCase();
+  console.log(word);
+  if (word.includes(lowercaseLetter)) {
+    console.log("letter is in");
+    //show letters on cubuks
+  } else {
+    if (lives == 1) {
+      //game over
+    } else {
+      lives = lives--;
+      //show one more man part
+      //function
+      console.log("letter not here")`kol-${lives}`;
+    }
+  }
 }
-buttons();
