@@ -1,14 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="./styles/style.css">
-</head>
-<body>
-  
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <header class="container ">
+      <h1 class="text">HANGMAN</h1>
+      <h3 class="text">VANILLA JAVASCRIPT HANGMAN GAME</h3>
+      <p class="text">
+        Use the alphabet below to guess the word, or click hint to get a clue.
+      </p>
+    </header>
 
-  <script src="./scripts/script.js"></script>
-</body>
+    <main class="container">
+      <section class="section-one">
+        <div class="btns">
+
+          <button class="btn" value="a">A</button><button class="btn" value="b">B</button
+          ><button class="btn" value="c">C</button><button class="btn" value="d">D</button
+          ><button class="btn" value="e">E</button><button class="btn" value="f">F</button
+          ><button class="btn" value="g">G</button><button class="btn" value="h">H</button
+          ><button class="btn" value="i">I</button><button class="btn" value="j">J</button
+          ><button class="btn" value="k">K</button><button class="btn" value="l">L</button
+          ><button class="btn" value="m">M</button><button class="btn" value="n">N</button
+          ><button class="btn" value="o">O</button><button class="btn" value="p">P</button
+          ><button class="btn" value="q">Q</button><button class="btn" value="r">R</button
+          ><button class="btn" value="s">S</button><button class="btn" value="t">T</button
+          ><button class="btn" value="u">U</button><button class="btn" value="v">V</button
+          ><button class="btn" value="w">W</button><button class="btn" value="x">X</button
+          ><button class="btn" value="y">Y</button><button class="btn" value="z">Z</button>
+        </div>
+      </section>
+      <!-- <section class="section-two">
+        <p class="category"></p>
+      </section> -->
+      <section class="sectoin-three">
+        <div id="blanks"></div>
+        <div id="lives"></div>
+      </section>
+      <section>
+        <div class="drow"></div>
+        <div class="restart">
+          <button id="btn-rest">
+            PLAY AGAIN
+          </button>
+        </div>
+      </section>
+    </main>
+    <script src="./scripts/script.js"></script>
+  </body>
 </html>
