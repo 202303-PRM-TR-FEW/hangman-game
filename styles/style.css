@@ -1,0 +1,11 @@
+body {
+  background-color: bisque;
+}
+
+#bckgrndpic {
+  max-width: 1000px;
+  z-index: -2;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
