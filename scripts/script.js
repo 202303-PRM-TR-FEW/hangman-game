@@ -1,6 +1,7 @@
 let word;
 let lives = 10;
 let didWin = false;
+let secretword;
 let hiddenword = document.getElementById("cubuks").innerHTML;
 
 //current lives DOM
@@ -49,9 +50,16 @@ function ButtonClick(letter) {
   if (word.includes(lowercaseLetter)) {
     console.log("letter is in");
     //show letters on cubuks
-    index = word.indexOf(lowercaseLetter);
-    console.log(index);
-    hiddenword[index] = lowercaseLetter;
+    //index = word.indexOf(lowercaseLetter);
+    //console.log(index);
+    //hiddenword[index] = lowercaseLetter;
+
+    for (let i = 0; i < word.length; i++) {
+      if (word[i] == lowercaseLetter) {
+        hiddenwordinital[i] = lowercaseLetter;
+        document.getElementById("cubuks").innerHTML = `${hiddenwordinital}`;
+      }
+    }
   } else {
     if (lives == 1) {
       //game over
