@@ -9,3 +9,93 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+
+/* dilsad */
+.hangman {
+  width: 200px;
+  height: 300px;
+  position: relative;
+}
+.gallows {
+  width: 200px;
+  height: 5px;
+  background-color: blue;
+  position: absolute;
+  top: 30px;
+  left: 0px;
+}
+.gallowsstick {
+  width: 5px;
+  height: 400px;
+  background-color: blue;
+  position: absolute;
+  top: 10 px;
+  left: 20px;
+}
+
+.gallowrope {
+  width: 5px;
+  height: 10px;
+  background-color: blue;
+  position: absolute;
+  top: 30px;
+  left: 105px;
+}
+.head {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  border: 10px solid black;
+  position: absolute;
+  top: 40px;
+  left: 70px;
+}
+
+.body {
+  width: 10px;
+  height: 100px;
+  background-color: black;
+  position: absolute;
+  top: 105px;
+  left: 100px;
+}
+
+.left-arm {
+  width: 65px;
+  height: 10px;
+  background-color: black;
+  transform: rotate(-25deg);
+  position: absolute;
+  top: 115px;
+  left: 45px;
+}
+
+.right-arm {
+  width: 65px;
+  height: 10px;
+  background-color: black;
+  transform: rotate(10deg);
+  position: absolute;
+  top: 110px;
+  left: 105px;
+}
+
+.left-leg {
+  width: 10px;
+  height: 90px;
+  background-color: black;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 180px;
+  left: 70px;
+}
+
+.right-leg {
+  width: 10px;
+  height: 90px;
+  background-color: black;
+  transform: rotate(-45deg);
+  position: absolute;
+  top: 180px;
+  left: 130px;
+}
