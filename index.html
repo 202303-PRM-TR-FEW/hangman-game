@@ -1,14 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="./styles/style.css">
-</head>
-<body>
-  
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <div id="container" class="container">
+      <div id="title-container" class="title-container">
+        <h1 class="title">HANGMAN</h1>
+        <p class="subtitle">The Game Of Death</p>
+      </div>
+      <div id="content-container" class="content-container">
+        <div id="explanation" class="explanation">
+          Use the alphabet below to guess the word, or click hint to get a clue.
+        </div>
+        <div id="alphabet" class="alphabet">
+          <button class="word-1">a</button>
+          <button class="word-2">b</button>
+          <button class="word-3">c</button>
+          <button class="word-4">d</button>
+          <button class="word-5">e</button>
+          <button class="word-6">f</button>
+          <button class="word-7">g</button>
+          <button class="word-8">h</button>
+          <button class="word-9">i</button>
+          <button class="word-10">j</button>
+          <button class="word-11">k</button>
+          <button class="word-12">l</button>
+          <button class="word-13">m</button>
+          <button class="word-14">n</button>
+          <button class="word-15">o</button>
+          <button class="word-16">p</button>
+          <button class="word-17">q</button>
+          <button class="word-18">r</button>
+          <button class="word-19">s</button>
+          <button class="word-20">t</button>
+          <button class="word-21">u</button>
+          <button class="word-22">v</button>
+          <button class="word-23">w</button>
+          <button class="word-24">x</button>
+          <button class="word-25">y</button>
+          <button class="word-26">z</button>
+        </div>
+        <div id="word-explanation" class="word-explanation"></div>
+        <div id="word-letters" class="word-letters">
+          <!-- I am planning on creating the lines and letters in javascript because they can change according to the word (word length) -->
+        </div>
+        <div class="counter"></div>
+        <div id="game-message" class="game-message">
+          <h3 id="dead-message">You're DEAD!</h3>
+          <h3 id="win-message">You're ALIVE!</h3>
+        </div>
+        <div id="hangman" class="hangman">
+          <!-- hangman pictures -->
+          <img id="hangman-img-1" src="" alt="" class="hangman-img-1">
+          <img id="hangman-img-2" src="" alt="" class="hangman-img-2">
+          <img id="hangman-img-3" src="" alt="" class="hangman-img-3">
+          <img id="hangman-img-4" src="" alt="" class="hangman-img-4">
+          <img id="hangman-img-5" src="" alt="" class="hangman-img-5">
+          <img id="hangman-img-6" src="" alt="" class="hangman-img-6">
+          <img id="hangman-img-7" src="" alt="" class="hangman-img-7">
+          <img id="hangman-img-8" src="" alt="" class="hangman-img-8">
+          <img id="hangman-img-9" src="" alt="" class="hangman-img-9">
+          <img id="hangman-img-10" src="" alt="" class="hangman-img-10">
+        </div>
+        <div id="buttons-container" class="buttons-container">
+          <button id="hint-btn" class="hint-btn"></button>
+          <button id="play-again-btn" class="play-again-btn"></button>
+        </div>
+      </div>
+    </div>
 
-  <script src="./scripts/script.js"></script>
-</body>
+    <script src="./scripts/script.js"></script>
+  </body>
 </html>
