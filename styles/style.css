@@ -1,6 +1,6 @@
 body {
   background-color: bisque;
-  background-image: url("/bckgrndpic.jpg");
+  background-image: url("./bckgrndpic.jpg");
   background-size: cover;
   background-position: center;
 }
