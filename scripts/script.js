@@ -1,6 +1,7 @@
 let word;
 let lives = 10;
 let didWin = false;
+let hiddenword = document.getElementById("cubuks").innerHTML;
 
 //current lives DOM
 const currentlives = document.querySelector("#currentlives");
@@ -10,23 +11,19 @@ currentlives.innerHTML = `You have ${lives} lives left `;
 const generateBtn = document.querySelector("#generatebtn");
 generateBtn.addEventListener("click", loadTheWord);
 
-//cubuks DOM
-//const cubuks = document.getElementById("cubuks");
-
-//Man display DOM
-//const mandrawing = document.getElementsByClassName("gallows").lastChild;
-//mandrawing.style.display = "none";
-
+// fetching word
 function loadTheWord() {
   return fetch(`https://random-word-api.herokuapp.com/word?number=1`)
     .then((response) => response.json())
     .then((response) => {
       word = response[0];
       console.log(word);
+      hiddenwordinital = [...word].map((x) => "_");
+      console.log(hiddenwordinital);
+      document.getElementById("cubuks").innerHTML = `${hiddenwordinital}`;
     })
     .catch((err) => console.error(err));
 }
-//[...word].map((x) => "_");
 
 //Aymans alphabet part
 function buttons() {
@@ -44,11 +41,17 @@ function buttons() {
 }
 buttons();
 
+//document.getElementById("cubuks");
+//let hiddenword = [...word].map((x) => "_");
+
 function ButtonClick(letter) {
   let lowercaseLetter = letter.toLowerCase();
   if (word.includes(lowercaseLetter)) {
     console.log("letter is in");
     //show letters on cubuks
+    index = word.indexOf(lowercaseLetter);
+    console.log(index);
+    hiddenword[index] = lowercaseLetter;
   } else {
     if (lives == 1) {
       //game over
