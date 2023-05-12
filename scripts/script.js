@@ -25,12 +25,12 @@ function replacLitters(word) {
 const btns = document.querySelectorAll(".btn")
 btns.forEach(btn => {
     btn.addEventListener("click",(e) => {
-        let value = btn.getAttribute('value')
-        console.log(value)
+        let value = e.target.value
+        btn.classList.toggle("clicked")
         checkletters(value)
     })
 })
 function checkletters(value){
-console.log(" value " + value)
+console.log("value " + value)
 }
 getRandomWord()
